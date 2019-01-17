@@ -1,0 +1,18 @@
+<!--games-->
+	<!ELEMENT games (game+)>
+	<!ELEMENT game (player*,turn+)>
+	<!ATTLIST game winner IDREF #REQUIRED>
+	<!ELEMENT player (#PCDATA)>
+	<!ATTLIST player id ID #REQUIRED
+	name CDATA #REQUIRED>
+	<!ELEMENT turn (payment|surprise)?>
+	<!ATTLIST turn 
+	player IDREF #REQUIRED
+	dice CDATA #REQUIRED>
+	<!ELEMENT payment EMPTY>
+	<!ATTLIST payment 
+	to IDREF #REQUIRED
+	amount CDATA #IMPLIED >
+	<!ELEMENT surprise EMPTY>
+	<!ATTLIST surprise 
+	amount CDATA #IMPLIED >

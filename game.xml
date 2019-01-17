@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE games SYSTEM "game.DTD">
+<games>
+	<game winner="chad">
+		<player name="Chad" id="chad" />
+		<player name="Bruce" id="bruce" />
+		<turn dice="42" player="noodles"/>
+		<turn dice="23" player="chad">
+			<surprise amount="23" />
+		</turn>
+		<turn dice="42" player="chad">
+			<surprise amount="42" />
+		</turn>
+	</game>
+	<game winner="noodles">
+		<player name="Noodles" id="noodles" />
+		<player name="Dexter" id="dexter" />
+		<turn dice="42" player="noodles"/>
+		<turn dice="42" player="blaze"/>
+	</game>
+	<game winner="blaze">
+		<player name="Blaze" id="blaze" />
+		<turn dice="42" player="noodles"/>
+		<turn dice="42" player="blaze"/>
+	</game>
+	<game winner="blaze">
+		<turn dice="42" player="noodles">
+			<payment to="blaze"/>
+		</turn>
+		<turn dice="42" player="blaze">
+			<payment to="noodles" amount="42"/>
+		</turn>
+	</game>
+</games>
